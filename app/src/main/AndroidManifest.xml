@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jadd.friends">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoopActivities.WaitingForVoteActivity"></activity>
+        <activity android:name=".LoopActivities.FinalResultDisplayActivity" />
+        <activity android:name=".LoopActivities.AnswerDisplayActivity" />
+        <activity android:name=".LoopActivities.CollectingAnswerActivity" />
+        <activity android:name=".LoopActivities.QuestionActivity" />
+        <activity
+            android:name=".Activity.JoinActivity"
+            android:parentActivityName=".Activity.HomePageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jadd.friends.Activity.HomePageActivity" />
+        </activity>
+        <activity android:name=".LoopActivities.LobbyActivity" />
+        <activity android:name=".Activity.HomePageActivity" />
+        <activity android:name=".Activity.SignUpActivity" />
+        <activity android:name=".Activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
